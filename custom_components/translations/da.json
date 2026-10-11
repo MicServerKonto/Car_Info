@@ -1,0 +1,83 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Opsæt Car Info",
+        "description": "Indtast din MotorAPI-nøgle og din nummerplade.\n\nAnsøg om API-adgang på motorapi.dk.",
+        "data": {
+          "api_key": "API-nøgle",
+          "registration_number": "Registreringsnummer (f.eks. AB12345)",
+          "show_inspect": "Vis inspect",
+          "show_inspection": "Vis inspection",
+          "show_leasing": "Vis leasing",
+          "show_status": "Vis status",
+          "show_vehicle": "Vis vehicle",
+          "show_weight": "Vis weight"
+        },
+        "data_description": {
+          "api_key": "Din personlige X-AUTH-TOKEN fra motorapi.dk"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Ugyldig API-nøgle – tjek din token på motorapi.dk.",
+      "cannot_connect": "Kunne ikke nå Motor API. Tjek din netværksforbindelse.",
+      "timeout": "Anmodningen fik timeout. Prøv igen.",
+      "vehicle_not_found": "Køretøj ikke fundet. Tjek registreringsnummeret."
+    },
+    "abort": {
+      "already_configured": "Dette køretøj er allerede konfigureret."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Car Info Indstillinger",
+        "description": "Vælg hvilke valgfri sensorer der skal vises for dette køretøj.",
+        "data": {
+          "show_inspect": "Vis inspect",
+          "show_inspection": "Vis inspection",
+          "show_leasing": "Vis leasing",
+          "show_status": "Vis status",
+          "show_vehicle": "Vis vehicle",
+          "show_weight": "Vis weight"
+        }
+      }
+    }
+  },
+  "services": {
+    "lookup_vehicle": {
+      "name": "Slå køretøj op",
+      "description": "Henter alle køretøjsdetaljer fra MotorAPI ved hjælp af registreringsnummer. Returnerer alle data som en svarsvariabel.",
+      "fields": {
+        "registration_number": {
+          "name": "Registreringsnummer",
+          "description": "Det danske registreringsnummer (nummerplade), f.eks. AB12345."
+        }
+      }
+    }
+  },
+  "exceptions": {
+    "empty_registration_number": {
+      "message": "Registreringsnummer må ikke være tomt."
+    },
+    "vehicle_not_found": {
+      "message": "Intet køretøj fundet for registreringsnummer '{registration_number}'."
+    },
+    "invalid_auth": {
+      "message": "Den konfigurerede API-nøgle blev afvist. Genkonfigurer integrationen med en gyldig nøgle."
+    },
+    "rate_limited": {
+      "message": "Motor API's dags-kvote er overskredet. Prøv igen i morgen."
+    },
+    "api_error": {
+      "message": "Motor API returnerede en uventet fejl (HTTP {status})."
+    },
+    "cannot_connect": {
+      "message": "Kunne ikke oprette forbindelse til Motor API. Tjek dit netværk."
+    },
+    "timeout": {
+      "message": "Anmodningen til Motor API fik timeout."
+    }
+  }
+}
