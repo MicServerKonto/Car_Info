@@ -7,7 +7,7 @@
 
 ## Requirements
 
-| Requirement | Version / Details |
+| Requirement | Get API |
 |---|---|
 | MotorAPI API key | Free — apply at [www.motorapi.dk](https://www.motorapi.dk) |
 
