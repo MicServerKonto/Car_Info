@@ -33,4 +33,21 @@ Post-setup options are available via **Configure** on the integration card:
 | Model year | Enable model year sensor | Off |
 | Vehicle use | Enable vehicle use type sensor | Off |
 
----
+## Data
+
+### Sensors
+
+| Sensor | Always shown | Type | Attributes |
+|---|---|---|---|
+| `Engine` | Yes | `int` | engine_volume: engine_cylinders: fuel_type: is_hybrid: hybrid_type: |
+| `Inspect` | Yes | `string` | message: all_day: start_time: end_time: location: description: |
+| `inspection` | Yes | `string` | days_until_next_inspection: last_inspection_date: mileage_at_last_inspection: mot_info_result: mot_info_status: mot_info_status_date: mot_info_type: |
+| `Leasing` | Yes | `string` | leasing_from: null leasing_to: |
+| `Status` | Optional | `int` | status_date: first_registration: registration_zipcode: |
+| `Vehicle` | Optional | `string` | model: variant: model_year: model_type: color: type: vehicle_use: vehicle_id: vin: chassis_type: registration_number: description: axels: pulling_axels: doors: seats: |
+| `Weight` | Optional | `string` | cerb_weight: own_weight: coupling: trailer_maxweight_nobrakes: trailer_maxweight_withbrakes: |
+
+
+### Update interval
+
+Data is fetched every 24 hours.
