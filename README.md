@@ -1,4 +1,9 @@
-# Car_Info
+<p align="center">
+  <img src="custom_components/brand/icon.svg" alt="Næste Syn" width="120" />
+</p>
+
+<h1 align="center">Car Info</h1>
+
 ## Known Limitations
 
 - Data availability depends on MotorAPI from the danish motorregister
