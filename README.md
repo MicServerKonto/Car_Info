@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="custom_components/brand/icon.svg" alt="Næste Syn" width="120" />
+  <img src="custom_components/brand/icon_big.svg" width="250" />
 </p>
 
 <h1 align="center">Car Info</h1>
